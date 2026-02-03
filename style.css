@@ -1,0 +1,443 @@
+/* 
+   2026 'Bold Minimalist Paper' Design
+   High Contrast, Serif-led, F-Pattern Flow
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap');
+
+:root {
+    /* Colors */
+    --bg-color: #FAFAF9;
+    /* Off-white paper */
+    --surface-color: #FAFAF9;
+    --primary-text: #050505;
+    /* Near Black */
+    --secondary-text: #333333;
+    --accent-color: #000000;
+
+    --border-color: #000000;
+    --border-light: #E5E5E5;
+
+    --zomato-color: #cb202d;
+    --swiggy-color: #FC8019;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1.5rem;
+    /* increased for breathability */
+    --spacing-md: 3rem;
+    --spacing-lg: 6rem;
+
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Merriweather', serif;
+
+    --text-base: 1.125rem;
+    /* 18px */
+    --text-lg: 1.25rem;
+    /* 20px */
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    line-height: 1.8;
+    font-feature-settings: "kern", "liga";
+}
+
+/* Typography Overhaul */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-text);
+    line-height: 1.1;
+    font-weight: 900;
+    /* Extra Bold */
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    letter-spacing: -0.04em;
+    margin-bottom: var(--spacing-md);
+    border-bottom: 4px solid var(--primary-text);
+    padding-bottom: var(--spacing-sm);
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--text-base);
+    color: var(--secondary-text);
+    max-width: 65ch;
+    /* Optimal reading length */
+}
+
+/* Icons */
+.icon {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: text-bottom;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    margin-right: 0.3em;
+}
+
+/* Layout - F-Pattern & Grid */
+.container {
+    max-width: 98vw;
+    margin: 0 4vw;
+}
+
+.article-width {
+    max-width: 92vw;
+    /* Slightly wider than strictly "optimal" to allow for bold images, 
+       text constrained via max-width elsewhere if needed */
+    margin: 0 4vw;
+}
+
+/* On really large screens, we can do a 2-col layout with sticky nav on left */
+@media (min-width: 1200px) {
+    .page-layout {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: var(--spacing-lg);
+        align-items: start;
+    }
+
+    .toc {
+        position: sticky;
+        top: var(--spacing-md);
+    }
+}
+
+/* Hero Section */
+.hero {
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.hero-meta {
+    font-family: 'Inter', sans-serif;
+    /* Keep sans for meta/ui text */
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    gap: var(--spacing-sm);
+    border-top: 1px solid var(--primary-text);
+    padding-top: var(--spacing-xs);
+    width: fit-content;
+}
+
+/* Stats Grid - Minimalist */
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: var(--spacing-md);
+}
+
+.stat-card {
+    /* No background, no shadow */
+    border-left: 1px solid var(--border-light);
+    padding-left: var(--spacing-sm);
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--secondary-text);
+}
+
+/* Navigation / TOC */
+.toc {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: var(--spacing-lg);
+}
+
+.toc h3 {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--primary-text);
+    padding-bottom: var(--spacing-xs);
+    display: inline-block;
+}
+
+.toc ul {
+    list-style: none;
+    border-left: 1px solid var(--border-light);
+}
+
+.toc li {
+    margin-bottom: 0;
+}
+
+.toc a {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--secondary-text);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+    margin-left: -2px;
+    /* Pull over border */
+}
+
+.toc a:hover {
+    color: var(--primary-text);
+    border-left-color: var(--primary-text);
+    background: #f0f0f0;
+}
+
+/* Findings Grid */
+.findings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+}
+
+.finding-card {
+    border: 2px solid var(--primary-text);
+    padding: var(--spacing-sm);
+    background: white;
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+    /* Retro brutalist shadow */
+    transition: transform 0.2s;
+}
+
+.finding-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+}
+
+/* Visualizations - BIGGER */
+.visualization {
+    margin: var(--spacing-lg) 0;
+    width: 100%;
+    /* Break out of container if possible? */
+}
+
+.visualization img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--primary-text);
+    display: block;
+}
+
+figcaption {
+    margin-top: var(--spacing-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    border-left: 2px solid var(--accent-color);
+    padding-left: var(--spacing-sm);
+}
+
+/* Tables */
+.table-wrapper {
+    overflow-x: auto;
+    margin: var(--spacing-md) 0;
+    border: 1px solid var(--primary-text);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: var(--primary-text);
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    padding: var(--spacing-sm);
+    text-align: left;
+}
+
+td {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--border-light);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Abstract Box */
+.abstract-box {
+    border-top: 4px solid var(--primary-text);
+    border-bottom: 1px solid var(--primary-text);
+    padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.35rem;
+    /* Larger lead text */
+    line-height: 1.6;
+}
+
+/* Badges */
+.badge {
+    padding: 0.2em 0.6em;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: white;
+}
+
+.badge.zomato {
+    background: #000;
+}
+
+/* Monochrome style override? Or keep brand colors? User asked for paper feel. Brand colors ok for accents. */
+.badge.swiggy {
+    background: #333;
+}
+
+/* Reverting to brand colors for clarity but keeping shape simple */
+.badge.zomato {
+    background: var(--zomato-color);
+}
+
+.badge.swiggy {
+    background: var(--swiggy-color);
+}
+
+/* Download Buttons */
+.download-section {
+    color: white;
+
+    text-align: left;
+    margin-bottom : 2rem;
+}
+
+.download-grid {
+    display: flex;
+    justify-content: left;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 2px solid black;
+    box-shadow: 4px 4px 0 white;
+    /* Inverted brutalist */
+    transition: transform 0.1s;
+}
+
+.btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 white;
+}
+
+/* Footer */
+footer {
+    border-top: 4px solid black;
+    padding: var(--spacing-lg) 0;
+    margin-top: 0;
+    /* Connected to download section */
+    text-align: left;
+}
+
+footer a {
+    color: black;
+    font-weight: bold;
+}
+
+/* Utilities */
+.mt-sm {
+    margin-top: var(--spacing-sm);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .page-layout {
+        display: block;
+    }
+
+    .toc {
+        position: static;
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: var(--spacing-md);
+    }
+
+    .toc ul {
+        border-left: none;
+        border-top: 1px solid var(--border-light);
+        padding-top: var(--spacing-sm);
+        columns: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .toc ul {
+        columns: 1;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "total_orders": 5000,
+  "total_revenue": 1376255.8499999999,
+  "average_order_value": 275.25116999999995,
+  "median_order_value": 227.44,
+  "platform_split": {
+    "Zomato": 2752,
+    "Swiggy": 2248
+  },
+  "top_localities": {
+    "MP Nagar": 762,
+    "New Market": 505,
+    "TT Nagar": 377,
+    "Arera Colony": 371,
+    "Jahangirabad": 307,
+    "Piplani": 288,
+    "Hoshangabad Road": 286,
+    "Ashoka Garden": 284,
+    "Shahpura": 228,
+    "Gulmohar Colony": 205
+  },
+  "top_cuisines": {
+    "North Indian": 1274,
+    "Chinese": 933,
+    "Fast Food": 763,
+    "South Indian": 607,
+    "Biryani": 474
+  },
+  "peak_hour": "18",
+  "average_delivery_time": 39.6228,
+  "localities_covered": 20
+}

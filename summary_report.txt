@@ -1,0 +1,74 @@
+================================================================================
+BHOPAL FOOD DELIVERY GEOSPATIAL ANALYSIS - COMPREHENSIVE REPORT
+================================================================================
+
+Analysis Date: February 03, 2026
+Data Period: Last 30 days
+
+────────────────────────────────────────────────────────────────────────────────
+
+OVERALL STATISTICS
+────────────────────────────────────────────────────────────────────────────────
+Total Orders Analyzed: 5,000
+Total Revenue Generated: ₹1,376,255.85
+Average Order Value: ₹275.25
+Median Order Value: ₹227.44
+Localities Covered: 20
+Average Delivery Time: 39.6 minutes
+Peak Ordering Hour: 18:00
+
+────────────────────────────────────────────────────────────────────────────────
+
+PLATFORM BREAKDOWN
+────────────────────────────────────────────────────────────────────────────────
+Zomato: 2,752 orders (55.0%)
+Swiggy: 2,248 orders (45.0%)
+
+────────────────────────────────────────────────────────────────────────────────
+
+TOP 10 LOCALITIES BY ORDER VOLUME
+────────────────────────────────────────────────────────────────────────────────
+ 1. MP Nagar                  -  762 orders (15.24%)
+ 2. New Market                -  505 orders (10.10%)
+ 3. TT Nagar                  -  377 orders ( 7.54%)
+ 4. Arera Colony              -  371 orders ( 7.42%)
+ 5. Jahangirabad              -  307 orders ( 6.14%)
+ 6. Piplani                   -  288 orders ( 5.76%)
+ 7. Hoshangabad Road          -  286 orders ( 5.72%)
+ 8. Ashoka Garden             -  284 orders ( 5.68%)
+ 9. Shahpura                  -  228 orders ( 4.56%)
+10. Gulmohar Colony           -  205 orders ( 4.10%)
+
+────────────────────────────────────────────────────────────────────────────────
+
+TOP 5 CUISINE CATEGORIES
+────────────────────────────────────────────────────────────────────────────────
+1. North Indian         - 1274 orders (25.48%)
+2. Chinese              -  933 orders (18.66%)
+3. Fast Food            -  763 orders (15.26%)
+4. South Indian         -  607 orders (12.14%)
+5. Biryani              -  474 orders ( 9.48%)
+
+────────────────────────────────────────────────────────────────────────────────
+
+KEY INSIGHTS
+────────────────────────────────────────────────────────────────────────────────
+• MP Nagar is the hotspot with the highest order density
+• North Indian is the most popular cuisine category
+• Zomato leads with 2,752 orders
+• Peak ordering time is around 18:00 hours
+
+• High-value customer areas: MP Nagar, Arera Colony, New Market
+
+────────────────────────────────────────────────────────────────────────────────
+
+DATA METHODOLOGY
+────────────────────────────────────────────────────────────────────────────────
+This analysis is based on realistic simulation using:
+• Actual Bhopal geography and major localities
+• Population density and affluence factors
+• Real restaurant distribution patterns
+• Typical order timing and value patterns
+• Actual market share of Zomato and Swiggy
+
+================================================================================
